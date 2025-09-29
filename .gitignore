@@ -1,0 +1,12 @@
+.vscode
+.idea
+__pycache__
+**/__pycache__
+*.pyc
+*.DS_Store
+*.env
+*.log
+notebooks/.ipynb_checkpoints
+secret
+.venv
+uv.lock
