@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-heartbeat"></i>
+                Diabetes Risk Predictor
+            </h1>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </header>
+
+        <div class="form-container">
+            <form id="predictionForm" class="prediction-form">
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="age">
+                            <i class="fas fa-calendar-alt"></i>
+                            Age
+                        </label>
+                        <input type="number" id="age" name="age" min="20" max="100" value="40" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pregnancies">
+                            <i class="fas fa-baby"></i>
+                            Pregnancies
+                        </label>
+                        <input type="number" id="pregnancies" name="pregnancies" min="0" max="17" value="0" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="glucose">
+                            <i class="fas fa-tint"></i>
+                            Glucose Level
+                        </label>
+                        <input type="number" id="glucose" name="glucose" min="40" max="600" value="110" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bloodPressure">
+                            <i class="fas fa-heart"></i>
+                            Blood Pressure
+                        </label>
+                        <input type="number" id="bloodPressure" name="bloodPressure" min="20" max="200" value="80" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skinThickness">
+                            <i class="fas fa-ruler"></i>
+                            Skin Thickness
+                        </label>
+                        <input type="number" id="skinThickness" name="skinThickness" min="3" max="150" value="5" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="insulin">
+                            <i class="fas fa-syringe"></i>
+                            Insulin Level
+                        </label>
+                        <input type="number" id="insulin" name="insulin" min="10" max="1000" value="100" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bmi">
+                            <i class="fas fa-weight"></i>
+                            BMI
+                        </label>
+                        <input type="number" id="bmi" name="bmi" min="15" max="100" step="0.1" value="50" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="diabetesPedigree">
+                            <i class="fas fa-dna"></i>
+                            Diabetes Pedigree Function
+                        </label>
+                        <input type="number" id="diabetesPedigree" name="diabetesPedigree" min="0" max="3" step="0.001" value="0" required>
+                        <div class="input-glow"></div>
+                    </div>
+                
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="predict-btn" id="predictBtn">
+                        <i class="fas fa-brain"></i>
+                        <span>Predict Risk</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+            </form>
+
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <div class="result-card">
+                    <h3><i class="fas fa-chart-line"></i> Prediction Result</h3>
+                    <div class="result-content" id="resultContent"></div>
+                </div>
+            </div>
+
+            <div class="loader" id="loader" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing your data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
