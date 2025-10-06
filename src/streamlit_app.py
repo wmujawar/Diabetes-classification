@@ -14,7 +14,7 @@ blood_pressure = st.number_input("Blood Pressure", min_value=20, max_value=200, 
 skin_thickness = st.number_input("Skin Thickness", min_value=3, max_value=150, value=5)
 insulin = st.number_input("Insulin Level", min_value=10, max_value=1000, value=100)
 bmi = st.number_input("BMI", min_value=15.0, max_value=100.0, value=25.0, step=0.1)
-diabetes_pedigree = st.number_input("Diabetes Pedigree Function", min_value=0.000, max_value=3.000, value=0.000, step=0.001)
+diabetes_pedigree = st.number_input("Diabetes Pedigree Function", min_value=0.000, max_value=3.000, value=0.000, step=0.001, format="%.3f")
 
 if st.button("Predict Diabetes Risk"):
     # Prepare input data
