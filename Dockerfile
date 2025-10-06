@@ -9,8 +9,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+RUN python -m pip install --upgrade pip && python -m pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "src.app:app"]
