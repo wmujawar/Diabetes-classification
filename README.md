@@ -25,6 +25,9 @@ This dataset is originally from the National Institute of Diabetes and Digestive
 - **Missing Attribute Values**: Yes
 - **Class Distribution**: Class value 1 is interpreted as "tested positive for diabetes"
 
+### Data Source
+The dataset can be accessed from [Kaggle](https://www.kaggle.com/datasets/mathchi/diabetes-data-set).
+
 ### Objective
 
 The primary objective of this project is to develop a machine learning classification model that can accurately predict whether a patient has diabetes based on their diagnostic measurements. Using the Pima Indians Diabetes Database, we aim to:
