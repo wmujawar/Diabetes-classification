@@ -9,7 +9,7 @@ class DiabetesModel:
                                 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
         
         # Load the model
-        model_path = os.path.join(os.getcwd(), 'models', 'XGBoost_model.pkl')
+        model_path = os.path.join(os.getcwd(), 'models', 'random_forest_model.pkl')
         with open(model_path, 'rb') as file:
             self.model = pickle.load(file)
         

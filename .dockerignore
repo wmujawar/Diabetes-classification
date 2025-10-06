@@ -13,7 +13,7 @@ __pycache__
 notebooks
 data
 models/decision_tree_model.pkl
-models/random_forest_model.pkl
+models/XGBoost_model.pkl
 models/gradient_boosting_model.pkl
 models/logistic_regression_model.pkl
 src/streamlit_app.py

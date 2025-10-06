@@ -247,4 +247,4 @@ class TestDiabetesModel:
             DiabetesModel()
         
         mock_getcwd.assert_called_once()
-        mock_join.assert_called_once_with('/fake/path', 'models', 'XGBoost_model.pkl')
+        mock_join.assert_called_once_with('/fake/path', 'models', 'random_forest_model.pkl')
