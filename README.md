@@ -36,7 +36,7 @@ The primary objective of this project is to develop a machine learning classific
 - Create a reliable tool that could assist healthcare professionals in early diabetes detection
 
 ## Getting Started
----
+
 ### Prerequisites
 To set up this project and install all the required dependencies, use the following steps.
 
@@ -58,7 +58,7 @@ To set up this project and install all the required dependencies, use the follow
 
 4. **Activate virtual environment**
     ```bash
-    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+    source .venv/bin/activate   # On Windows use `.venv\Scripts\activate`
     ```
 
 5. **Install dependencies:**
