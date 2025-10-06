@@ -50,13 +50,13 @@ To set up this project and install all the required dependencies, use the follow
     
     Follow the [instruction](https://docs.astral.sh/uv/getting-started/installation/) to setup uv package manager
 
-3. **Install the dependencies:**
+3. **Create virtual environment:**
 
     ```bash
     uv venv -p python3.12
     ```
 
-4. **Create a virtual environment**
+4. **Activate virtual environment**
     ```bash
     source venv/bin/activate   # On Windows use `venv\Scripts\activate`
     ```
